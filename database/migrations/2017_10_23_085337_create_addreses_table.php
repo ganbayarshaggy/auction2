@@ -3,20 +3,19 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateNoteTable extends Migration {
+class CreateAddresesTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('note', function(Blueprint $table) {
+		Schema::create('addreses', function(Blueprint $table) {
 			$table->increments('id');
+			$table->string('name');
 			$table->timestamps();
-			$table->integer('auction_id')->unsigned();
-			$table->integer('bidder_id')->unsigned();
 		});
 	}
 
 	public function down()
 	{
-		Schema::drop('note');
+		Schema::drop('address');
 	}
 }

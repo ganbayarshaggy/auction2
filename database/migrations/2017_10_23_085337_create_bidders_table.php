@@ -3,11 +3,11 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateBidderTable extends Migration {
+class CreateBiddersTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('bidder', function(Blueprint $table) {
+		Schema::create('bidders', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('last_name', 100);
 			$table->string('first_name', 100);

@@ -3,11 +3,11 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateNewspaperTable extends Migration {
+class CreateNewspapersTable extends Migration {
 
 	public function up()
 	{
-		Schema::create('newspaper', function(Blueprint $table) {
+		Schema::create('newspapers', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name', 255);
 			$table->string('number');
