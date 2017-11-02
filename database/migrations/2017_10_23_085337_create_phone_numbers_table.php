@@ -10,7 +10,7 @@ class CreatePhoneNumbersTable extends Migration {
 		Schema::create('phone_numbers', function(Blueprint $table) {
 			$table->increments('id');
 			$table->integer('phone_number');
-			$table->tinyInteger('type');
+			$table->integer('type');
 			$table->timestamps();
 		});
 	}

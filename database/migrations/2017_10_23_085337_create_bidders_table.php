@@ -15,7 +15,7 @@ class CreateBiddersTable extends Migration {
 			$table->string('agent_name', 100);
 			$table->string('agent_parent', 100);
 			$table->string('agent_register', 10);
-			$table->float('prepayment_price');
+			$table->double('prepayment_price',13,2);
 			$table->string('prepayment_word', 255);
 			$table->datetime('prepayment_date');
 			$table->string('address', 255);

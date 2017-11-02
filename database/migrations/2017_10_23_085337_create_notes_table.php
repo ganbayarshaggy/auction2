@@ -12,6 +12,8 @@ class CreateNotesTable extends Migration {
 			$table->timestamps();
 			$table->integer('auction_id')->unsigned();
 			$table->integer('bidder_id')->unsigned();
+			$table->integer('time_range')->unsigned();
+			$table->integer('time');
 		});
 	}
 

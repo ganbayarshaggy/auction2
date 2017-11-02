@@ -23,8 +23,9 @@ class CreateInvitationsTable extends Migration
             $table->datetime('request_date');
             $table->string('request_address', 255);
             $table->string('news_webaddress', 255);
-            $table->string('news_addresss', 255);
+            $table->string('news_address', 255);
             $table->integer('phone_number_id');
+            $table->integer('address_id');
             $table->timestamps();
         });
     }
