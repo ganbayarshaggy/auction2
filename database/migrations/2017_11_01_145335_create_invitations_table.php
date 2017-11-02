@@ -15,6 +15,7 @@ class CreateInvitationsTable extends Migration
     {
         Schema::create('invitations', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('inv_name');
             $table->datetime('rule_date');
             $table->smallInteger('rule_number');
             $table->text('intro');
