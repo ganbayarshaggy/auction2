@@ -499,11 +499,29 @@
 						</div>
 						<div class="col-md-9">
 							<p>
-								Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi. Eu ponderum mediocrem has, vitae adolescens in pro. Mea liber ridens inermis ei, mei legendos vulputate an, labitur tibique te qui.
-							</p>
-							<h4>Hotel facilities</h4>
-							<p>
-								Lorem ipsum dolor sit amet, at omnes deseruisse pri. Quo aeterno legimus insolens ad. Sit cu detraxit constituam, an mel iudico constituto efficiendi.
+								@php
+									foreach($invs->property as $pro){ 
+										foreach($pro->property_photo as $photos){
+						@endphp
+								<p>Зураг {{ $photos->photo_name}}</p>
+
+						@php
+									}	
+						@endphp		
+								<p>Танилцуулга {{ $pro->other}}</p> 
+								<p>Бусад мэдээлэлүүд {{ $pro->property_kind_json}}</p>
+								<p>Худалдаа болох цаг {{ $invs->enddate}}</p>
+								<p> Болох газар {{ $invs->location }}</p>
+								<p> Доод үнэ {{$pro->pivot->min_price }} </p>
+
+								@php															
+						
+									}
+
+								@endphp
+
+								
+
 							</p>
 							<div class="row">
 								<div class="col-md-6 col-sm-6">

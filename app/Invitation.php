@@ -16,7 +16,7 @@ class Invitation extends Model
 
     public function address()
     {
-    	return $this->hasOne('App\address');
+    	return $this->hasMany('App\address');
     }
 
     public function phone_number()

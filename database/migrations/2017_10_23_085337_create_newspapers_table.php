@@ -12,7 +12,7 @@ class CreateNewspapersTable extends Migration {
 			$table->string('name', 255);
 			$table->string('number');
 			$table->date('date');
-			$table->timestamps();
+			$table->integer('invitation_id');
 		});
 	}
 

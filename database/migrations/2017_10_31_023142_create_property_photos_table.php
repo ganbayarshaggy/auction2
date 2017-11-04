@@ -17,6 +17,7 @@ class CreatePropertyPhotosTable extends Migration
             $table->increments('id');
             $table->string('photo_name', 255);
             $table->string('photo_description', 255);
+            $table->integer('property_id');
         });
     }
 

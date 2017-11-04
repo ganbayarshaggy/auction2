@@ -10,7 +10,8 @@ class CreateAddresesTable extends Migration {
 		Schema::create('addreses', function(Blueprint $table) {
 			$table->increments('id');
 			$table->string('name');
-			$table->timestamps();
+			$table->integer('type');
+			$table->integer('invitation_id');
 		});
 	}
 

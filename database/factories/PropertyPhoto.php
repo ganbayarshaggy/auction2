@@ -7,6 +7,9 @@ use Faker\Generator as Faker;
 $factory->define(App\PropertyPhoto::class, function (Faker $faker) {
     return [
       'photo_name' => 'test.png'  ,
-      'photo_description' => $faker->realText($maxNbChars = 150, $indexSize = 2)
+      'photo_description' => $faker->realText($maxNbChars = 150, $indexSize = 2),
+      'property_id' => function(){
+			return factory(App\Property::class)->create()->id;
+		}
   ];
 });

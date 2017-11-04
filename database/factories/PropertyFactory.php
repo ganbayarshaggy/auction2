@@ -14,14 +14,10 @@ $factory->define(App\Property::class, function (Faker $faker) {
         'state_registration_number' =>  $faker->randomNumber($nbDigits = NULL, $strict = false),
         'status' => $faker->word,
         'other' => $faker->paragraph($nbSentences = 3, $variableNbSentences = true),
-        'property_kind_json' => $faker->text,
+        'property_kind_json' => "{'undur':'10m','urgun':20,'busad uzuulelt':'mca'}",
 		'organization_id' => function(){
 			return factory(App\Organizer::class)->create()->id;
 		},
-		'photo_id' => function(){
-			return factory(App\PropertyPhoto::class)->create()->id;
-		}
-
 
     ];
 });

@@ -21,10 +21,9 @@ class CreatePropertiesTable extends Migration
             $table->string('technical_specification', 255);
             $table->string('state_registration_number', 255);
             $table->string('status', 255);
-            $table->string('other', 255);
+            $table->text('other');
             $table->text('property_kind_json');
             $table->integer('organization_id');
-            $table->integer('photo_id');
             $table->timestamps();
         });
     }

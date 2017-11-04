@@ -11,7 +11,7 @@ class PropertyPhoto extends Model
     public $timestamps = false;
 
      public function property(){
-        return $this->belongsTo('App\Property');
+        return $this->hasMany('App\Property');
     }
 
 }

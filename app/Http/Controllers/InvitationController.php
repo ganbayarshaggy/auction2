@@ -31,9 +31,9 @@ class InvitationController extends Controller
 
 	public function details($id){
 		//$inv_id = App\Invitation::find($id)->property->first()->pivot;//->with('property');//->
-		$inv = Invitation::find($id)->property;  //->with('property');//->
+		$invs = Invitation::find($id); 
 
-		return view('details')->with("inv", $inv);
+		return view('details')->with("invs", $invs);
 	}
     
 }

@@ -11,7 +11,7 @@ class CreatePhoneNumbersTable extends Migration {
 			$table->increments('id');
 			$table->integer('phone_number');
 			$table->integer('type');
-			$table->timestamps();
+			$table->integer('invitation_id');
 		});
 	}
 

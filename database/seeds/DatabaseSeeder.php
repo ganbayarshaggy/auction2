@@ -16,6 +16,15 @@ class DatabaseSeeder extends Seeder
     	// factory('App\Invitation',10)->create();
     	//factory('App\Auction',10)->create();
     	//factory('App\Bidder',10)->create();
-    	factory('App\Note',10)->create();
+    	
+        
+
+        factory('App\Address',10)->create();        
+        factory('App\Newspaper',10)->create();        
+        factory('App\Newspaper',10)->create();        
+        factory('App\PhoneNumber',10)->create();        
+        factory('App\PropertyPhoto',10)->create();  
+
+        factory('App\Note',10)->create();
     }
 }
